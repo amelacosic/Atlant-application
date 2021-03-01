@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210301 02:08:47.585" generator="Robot 3.2.2 (Python 2.7.18 on win32)">
+<suite source="C:\AutomationPractice\Tests" id="s1" name="Tests">
+<suite source="C:\AutomationPractice\Tests\Search.robot" id="s1-s1" name="Search">
+<kw type="setup" name="Open Browser to &quot;automationpractice.com&quot; page" library="base">
+<doc>Opens a browser and go to "automationpractice.com" page</doc>
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>browser=${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210301 02:08:49.054" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20210301 02:09:05.628" starttime="20210301 02:08:49.052"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210301 02:09:08.462" starttime="20210301 02:09:05.629"></status>
+</kw>
+<status status="PASS" endtime="20210301 02:09:08.464" starttime="20210301 02:08:49.050"></status>
+</kw>
+<test id="s1-s1-t1" name="Search for the Item - Sign In">
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${BTN_SIGN_IN}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:08.527" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Sign in')]'.</msg>
+<status status="PASS" endtime="20210301 02:09:13.281" starttime="20210301 02:09:08.524"></status>
+</kw>
+<kw name="Login:" library="base">
+<doc>Login with correct E-mail and Password</doc>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${IN_EMAIL}</arg>
+<arg>${E-MAIL}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:13.298" level="INFO">Typing text 'amelacosic34@gmail.com' into text field 'id=email'</msg>
+<status status="PASS" endtime="20210301 02:09:15.161" starttime="20210301 02:09:13.296"></status>
+</kw>
+<kw name="Input Password" library="ExtendedSelenium2Library">
+<doc>Types the given password into text field identified by `locator`.</doc>
+<arguments>
+<arg>${IN_PASS}</arg>
+<arg>${PASS}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:15.165" level="INFO">Typing password into text field 'id=passwd'</msg>
+<status status="PASS" endtime="20210301 02:09:16.274" starttime="20210301 02:09:15.162"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<msg timestamp="20210301 02:09:21.283" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20210301 02:09:21.284" starttime="20210301 02:09:16.275"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${BTN_SUMBIT_LOGIN}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:21.286" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" endtime="20210301 02:09:25.398" starttime="20210301 02:09:21.284"></status>
+</kw>
+<status status="PASS" endtime="20210301 02:09:25.399" starttime="20210301 02:09:13.291"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${LNK_LOGO}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:25.403" level="INFO">Clicking element 'id=header_logo'.</msg>
+<status status="PASS" endtime="20210301 02:09:29.113" starttime="20210301 02:09:25.401"></status>
+</kw>
+<kw name="Input Text" library="ExtendedSelenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${IN_SEARCH}</arg>
+<arg>T-shirtđđ</arg>
+</arguments>
+<msg timestamp="20210301 02:09:29.119" level="INFO">Typing text 'T-shirtđđ' into text field 'id=search_query_top'</msg>
+<status status="PASS" endtime="20210301 02:09:30.171" starttime="20210301 02:09:29.117"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${BTN_SEARCH}</arg>
+</arguments>
+<msg timestamp="20210301 02:09:30.175" level="INFO">Clicking element 'css=.button-search'.</msg>
+<status status="PASS" endtime="20210301 02:09:33.616" starttime="20210301 02:09:30.173"></status>
+</kw>
+<kw name="Element Should Be Visible" library="ExtendedSelenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[contains(text(),'has been found.')]</arg>
+</arguments>
+<msg timestamp="20210301 02:09:33.619" level="INFO">Verifying element 'xpath=//*[contains(text(),'has been found.')]' is visible.</msg>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20210301 02:09:49.980" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210301 02:09:49.981" starttime="20210301 02:09:48.691"></status>
+</kw>
+<msg timestamp="20210301 02:09:49.988" level="FAIL">The element 'xpath=//*[contains(text(),'has been found.')]' should be visible, but it is not.</msg>
+<status status="FAIL" endtime="20210301 02:09:49.989" starttime="20210301 02:09:33.618"></status>
+</kw>
+<doc>Search for the Item</doc>
+<status status="FAIL" endtime="20210301 02:09:49.991" critical="yes" starttime="20210301 02:09:08.464">The element 'xpath=//*[contains(text(),'has been found.')]' should be visible, but it is not.</status>
+</test>
+<kw type="teardown" name="Close Browser" library="ExtendedSelenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210301 02:09:53.619" starttime="20210301 02:09:50.007"></status>
+</kw>
+<status status="FAIL" endtime="20210301 02:09:53.619" starttime="20210301 02:08:47.711"></status>
+</suite>
+<status status="FAIL" endtime="20210301 02:09:53.721" starttime="20210301 02:08:47.598"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Tests" pass="0">Tests</stat>
+<stat fail="1" id="s1-s1" name="Search" pass="0">Tests.Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
